@@ -1,4 +1,3 @@
-/* ============ BASE BODY ============ */
 body {
     background: linear-gradient(344deg, #e9ebee 0%, #8b9197 100%);
     margin: 0;
@@ -9,9 +8,10 @@ html {
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
-.hero, .about, .projects, .footer {
-    scroll-snap-align: start;
+body.dark-mode {
+    background: linear-gradient(344deg, #1a1a1a 0%, #0d0d0d 100%);
 }
+
 .bottom-blur {
     position: fixed;
     bottom: 0;
@@ -26,7 +26,6 @@ html {
     z-index: 200;
 }
 
-/* ============ NAVBAR (Sticky + Blur) ============ */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -233,6 +232,10 @@ html {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(13, 27, 42, 0.3);
+}
+.skill-badge.active {
+    background-color: #0d1b2a;
+    color: white;
 }
 
 .badge-html { top: 10px; left: -40px; }
@@ -496,5 +499,31 @@ html {
     color: #5a2121;
     font-size: 13px;
     padding: 20px;
+}
+.pull-cord {
+    position: fixed;
+    top: 0;
+    right: 40px;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cord-line {
+    width: 2px;
+    height: 80px;
+    background-color: #888;
+    transition: all 0.3s ease;
+}
+
+.cord-handle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0a500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
